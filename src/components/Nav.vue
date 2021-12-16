@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <template>
 <div id="nav">
     <header class="header fixed-top" id="header">
@@ -283,73 +282,4 @@ render();
 
 <style src="../assets/css/nav.css" scoped>
 
-=======
-<template>
-<div id="nav">
-    <header class="header fixed-top" id="header">
-         <div class="page">
-             <el-button type="primary" round @click="toggleMen">登录</el-button>
-             <Hide ref="hideRef"></Hide>
-        </div>
-        </header>
- <section class="hero-banner">
-        <div class="container">
-            <div class="row align-items-center justify-content-center">
-                <div>
-                    <div class="hero-inner">
-                        <h1>Welcome to blog</h1>
-                        <div class="btn-group">
-                            <a href="#" class="primary-outline-btn">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="last">
-             <div class="move">
-            <ul>
-                <li>
-                    <div class="clound1"></div>
-                </li>
-                <li>
-                    <div class="clound2"></div>
-                </li>
-                <li>
-                    <div class="clound3"></div>
-                </li>
-                <li>
-                    <div class="clound1"></div>
-                </li>
-                <li>
-                    <div class="clound2"></div>
-                </li>
-                <li>
-                    <div class="clound3"></div>
-                </li>
-            </ul>
-        </div>
-        </div>
-    </section>
-</div>
-</template>
-
-<script>
-import Hide from './Hide'
-export default {
-    components:{
-        Hide
-    },
-    methods: {
-        toggleMen(){
-            // console.log(this);
-            this.$refs.hideRef.toggleMenu();
-        }
-    },
-  
-}
-</script>
-
-<style src="../assets/css/nav.css" scoped>
-
->>>>>>> 7454ae7dc0c594d388f31b6970a622dfed507a79
 </style>

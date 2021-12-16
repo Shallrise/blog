@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <template>
     <div>
        <el-form @submit.native.prevent ref="form" :model="article" label-width="80px">
@@ -47,54 +46,4 @@
       this.fetch();
     }
   }
-=======
-<template>
-    <div>
-       <el-form @submit.native.prevent ref="form" :model="article" label-width="80px">
-  <el-form-item label="文章标题">
-    <el-input v-model="article.title"></el-input>
-  </el-form-item>
-  
-  
-  <el-form-item label="文章内容">
-    <el-input type="textarea" v-model="article.body"></el-input>
-  </el-form-item>
-  <el-form-item>
-    <el-button type="primary" native-type="submit" @click="saveArticle">保存</el-button>
-    <el-button>取消</el-button>
-  </el-form-item>
-</el-form>
-    </div>
-</template>
-
-<script>
-  export default {
-    data() {
-      return {
-        article: {
-         
-        }
-      };
-    },
-    methods: {
-      saveArticle() {
-        this.$http.put(`article/${this.$route.params.id}`,this.article).then(()=>{
-           this.$message({
-          message: '文章更新成功',
-          type: 'success'
-        });
-        this.$router.push('/article/index');
-        });
-      },
-      fetch(){
-        this.$http.get(`article/${this.$route.params.id}`).then(res =>{
-          this.article=res.data
-        })
-      }
-    },
-    created(){
-      this.fetch();
-    }
-  }
->>>>>>> 7454ae7dc0c594d388f31b6970a622dfed507a79
 </script>
